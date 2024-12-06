@@ -1,0 +1,235 @@
+@import './base.css';
+
+.container{
+    padding-top: 100px;
+}
+.categories .row{
+    gap: 40px;
+}
+.category{
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   padding: 30px;
+   width: 500px;
+   text-align: center;
+}
+.products .row{
+    gap: 50px;
+    justify-content: center;
+}
+
+.products .product{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 40px;
+    width: 400px;
+    text-align: center;
+}
+.products .title{
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+.products .title h1{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 20px;
+    font-size: 100px;
+
+}
+.loader-container{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+.active{
+    display: flex;
+}
+.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    position: relative;
+    animation: rotate 1s linear infinite;
+    
+  }
+  .loader::before , .loader::after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    inset: 0px;
+    border-radius: 50%;
+    border: 5px solid #FFF;
+    animation: prixClipFix 2s linear infinite ;
+  }
+  .loader::after{
+    inset: 8px;
+    transform: rotate3d(90, 90, 0, 180deg );
+    border-color: var(--mainColor);
+  }
+
+  @keyframes rotate {
+    0%   {transform: rotate(0deg)}
+    100%   {transform: rotate(360deg)}
+  }
+
+  @keyframes prixClipFix {
+      0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+      50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+      75%, 100%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+  }
+  .header {
+    background-color: #ffff;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    box-shadow: 0px 10.6474391222000122px 8.23719596862793px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+}
+.header .container{
+    padding-top: 10px;
+}
+.header .logo a {
+    color: var(--mainColor);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2.5px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.header .logo a img {
+    width: 35px;
+}
+
+.bars {
+    display: none;
+}
+
+.nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.nav ul li a {
+    color: #101928;
+}
+
+.nav ul .active {
+    font-weight: 900;
+}
+
+.auth {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 15px;
+}
+
+.auth a {
+    font-family: var(--subFont);
+    color: var(--mainColor);
+    border-radius: 10px;
+    padding: 9.3541765213012695px 24.18113136291504px;
+    border: 1px solid #545be8;
+
+}
+
+.auth .Register {
+    color: #ffff;
+    background-color: #545BE8;
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.pagination {
+    list-style: none;
+    display: flex;
+}
+
+.page-item {
+    margin: 0 5px;
+}
+
+.page-link {
+    display: block;
+    padding: 10px 15px;
+    color: #007bff;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.page-link:hover {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+.page-item.active .page-link {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+.page-item.disabled .page-link {
+    color: #ccc;
+    cursor: not-allowed;
+    border-color: #ddd;
+}
+.details .container{
+    padding-top:150px ;
+}
+.details .row{
+    justify-content: space-around;
+}
+.details p {
+    width: 500px;
+    font-weight: bold;
+}
+.details img {
+    width: 500px;
+}
+.details h1{
+    font-size: 55px;
+}
+.single-details{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.details .price{
+    font-weight: bold;
+    color: red;
+    font-size: 30px;
+
+}
+.details .shop{
+    display: flex;
+    align-items: center;
+    gap: 150px;
+    color: var(--mainColor);
+
+}
+.details .number p{
+    font-size: 30px;
+    color: black;
+}
+.details .number{
+    display: flex;
+    width: 0px;
+    align-items: center;
+    gap: 20px;
+    color: var(--mainColor);
+}

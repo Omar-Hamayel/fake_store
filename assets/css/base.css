@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;   
+}
+:root{
+    --mainColor:#545BE8;
+    --mainFont:"Poppins", sans-serif;
+    --subFont:"Inter", sans-serif;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+.container{
+    width:calc(100% - 122px);
+    margin: auto;
+}
+.row{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
